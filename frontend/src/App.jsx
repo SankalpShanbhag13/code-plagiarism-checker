@@ -5,8 +5,7 @@ import CodeComparer from './components/CodeComparer';
 import EventDashboard from './components/EventDashboard';
 import UserProfile from './components/UserProfile';
 
-const BACKEND_URL = 'http://localhost:5000';
-
+const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 export default function App() {
   const [activeTab, setActiveTab] = useState('compare');
   const [user, setUser] = useState(null);
